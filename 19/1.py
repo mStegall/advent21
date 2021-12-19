@@ -97,15 +97,7 @@ def pperms():
         [-1,-1,-1],
     ]
 
-    # return product(permutations(i),d)
-    return product([
-        [0,1,2],
-        [0,2,1],
-        [1,2,0],
-        [1,0,2],
-        [2,1,0],
-        [2,0,1]
-    ],d)
+    return product(permutations(i),d)
 
 def findDirection(pointMap, center):
     perms = pperms()

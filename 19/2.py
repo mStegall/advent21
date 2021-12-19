@@ -97,15 +97,7 @@ def pperms():
         [-1,-1,-1],
     ]
 
-    # return product(permutations(i),d)
-    return product([
-        [0,1,2],
-        [0,2,1],
-        [1,2,0],
-        [1,0,2],
-        [2,1,0],
-        [2,0,1]
-    ],d)
+    return product(permutations(i),d)
 
 def findDirection(pointMap, center):
     perms = pperms()
@@ -144,7 +136,6 @@ maxD = 0
 
 for i, c1 in enumerate(centers):
     for c2 in centers[i+1:]:
-        # print(c1,c2)
         maxD = max(maxD, distance(c1, c2))
 
 print(maxD)
