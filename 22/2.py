@@ -78,6 +78,9 @@ def cubeSegments(c1,c2):
     else:
         return [c1],[]
 
+    if len(deadSquares) == 0:
+        return [c1],[]
+
     liveCubes = []
     deadCubes = []
 
